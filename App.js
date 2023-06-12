@@ -5,7 +5,6 @@ import As1 from "./assignment/1";
 export default function App() {
 	return (
 		<View style={styles.container}>
-			<StatusBar style="auto" />
 			<As1 />
 		</View>
 	);
