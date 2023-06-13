@@ -1,6 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import Phonebook from "./Assignment/1/Index";
+import Gmail from "./Assignment/2/Index";
 
 export default function App() {
   return (
@@ -8,7 +9,8 @@ export default function App() {
     //   <Text>Open up App.js to start working on your app!</Text>
     //   <StatusBar style="auto" />
     // </View>
-    <Phonebook />
+    // <Phonebook />
+    <Gmail />
   );
 }
 
