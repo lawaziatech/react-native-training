@@ -1,12 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-
+import Contacts from './Assignment/1/Index';
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Hi</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Contacts/>
+    // <View style={styles.container}>
+    //   <Text>Hi</Text>
+    //   <StatusBar style="auto" />
+    // </View>
   );
 }
 
