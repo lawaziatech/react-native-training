@@ -6,12 +6,73 @@ import {
   Image,
   SafeAreaView,
   TouchableOpacity,
+  FlatList,
 } from "react-native";
 import Constants from "expo-constants";
 import MailItem from "./components/mailItem";
 import Footer from "./components/Footer";
 import { StatusBar } from "expo-status-bar";
 // You can import from local files
+
+const Data = [
+  {
+    id: "1",
+    logo: "L",
+    name: "Lawazia Tech",
+    heading: "Greeting form Lawazia Tech.",
+    msg: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    time: "7.12 PM",
+  },
+  {
+    id: "2",
+    logo: "I",
+    name: "Internshala",
+    heading: "New Interships for you..",
+    msg: `Hi Anuj,The number of internships you do during your college time is directly going to help you get your dream job. The more internships you do, the more connections and experience you will gain. 
+    We have filtered an exclusive list of internships that might fit well with your skilsets. Please do check out the list and apply for 7-8 such internships to increase your chances of getting selected (Students who got Offers through our platform did the same).
+     Regards,
+    Team Cuvette`,
+    time: "7.05 PM",
+  },
+  {
+    id: "3",
+    logo: "I",
+    name: "Internshala",
+    heading: "New Interships for you..",
+    msg: `Hi Anuj,The number of internships you do during your college time is directly going to help you get your dream job. The more internships you do, the more connections and experience you will gain. 
+    We have filtered an exclusive list of internships that might fit well with your skilsets. Please do check out the list and apply for 7-8 such internships to increase your chances of getting selected (Students who got Offers through our platform did the same).
+     Regards,
+    Team Cuvette`,
+    time: "6:32 PM",
+  },
+  {
+    id: "4",
+    logo: "L",
+    name: "LinkedIn",
+    heading: "New message in Inbox",
+    msg: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+    time: "6:08 PM",
+  },
+  {
+    id: "5",
+    logo: "L",
+    name: "LinkedIn",
+    heading: "New message in Inbox",
+    msg: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+    time: "5:56 PM",
+  },
+  {
+    id: "6",
+    logo: "I",
+    name: "Internshala",
+    heading: "New Interships for you..",
+    msg: `Hi Anuj,The number of internships you do during your college time is directly going to help you get your dream job. The more internships you do, the more connections and experience you will gain. 
+    We have filtered an exclusive list of internships that might fit well with your skilsets. Please do check out the list and apply for 7-8 such internships to increase your chances of getting selected (Students who got Offers through our platform did the same).
+     Regards,
+    Team Cuvette`,
+    time: "5:23 PM",
+  },
+];
 
 export default function Gmail({ navigation }) {
   const handleClick = () => {
@@ -34,18 +95,32 @@ export default function Gmail({ navigation }) {
         </TouchableOpacity>
       </View>
       <View>
-        <MailItem
+        <FlatList
+          data={Data}
+          renderItem={({ item }) => (
+            <MailItem
+              logo={item.logo}
+              name={item.name}
+              heading={item.heading}
+              msg={item.msg}
+              time={item.time}
+              navigation={navigation}
+            />
+          )}
+          keyExtractor={(item) => item.id}
+        />
+        {/* <MailItem
           logo={"L"}
           name={"Lawazia Tech"}
           heading={"Greeting form Lawazia Tech."}
           msg={
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            
           }
           time={"7.12 PM"}
           navigation={navigation}
-        />
+        /> */}
 
-        <MailItem
+        {/* <MailItem
           logo={"I"}
           name={"Internshala"}
           heading={"New Interships for you.."}
@@ -57,9 +132,9 @@ export default function Gmail({ navigation }) {
           `}
           time={"7.05 PM"}
           navigation={navigation}
-        />
+        /> */}
 
-        <MailItem
+        {/* <MailItem
           logo={"I"}
           name={"Internshala"}
           heading={"New Interships for you.."}
@@ -71,9 +146,9 @@ export default function Gmail({ navigation }) {
           `}
           time={"6:32 PM"}
           navigation={navigation}
-        />
+        /> */}
 
-        <MailItem
+        {/* <MailItem
           logo={"L"}
           name={"Linkedin"}
           heading={"New message in Inbox"}
@@ -92,9 +167,9 @@ export default function Gmail({ navigation }) {
           }
           time={"5:56 PM"}
           navigation={navigation}
-        />
+        /> */}
 
-        <MailItem
+        {/* <MailItem
           logo={"I"}
           name={"Internshala"}
           heading={"New Interships for you.."}
@@ -106,7 +181,7 @@ export default function Gmail({ navigation }) {
           `}
           time={"5:23 PM"}
           navigation={navigation}
-        />
+        /> */}
       </View>
 
       <Footer />
