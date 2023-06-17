@@ -5,7 +5,6 @@ import { View, Text } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomeScreen from "./components/Home";
-import Details from "./components/main";
 import ItemDetails from "./components/ItemDetails";
 
 const Stack = createNativeStackNavigator();
@@ -15,9 +14,7 @@ function Mail() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Mail" component={Details} />
-        <Stack.Screen name="My mail" component={ItemDetails} />
-
+        <Stack.Screen name="MyMail" component={ItemDetails} />
       </Stack.Navigator>
     </NavigationContainer>
   );

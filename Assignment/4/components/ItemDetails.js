@@ -1,14 +1,150 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Image } from "react-native";
 import React from "react";
 
-const ItemDetails = () => {
-	return (
-		<View>
-			<Text>ItemDetails</Text>
-		</View>
-	);
+const ItemDetails = (props) => {
+  const topContainer = () => {
+    return (
+      <View style={styles.topContainer}>
+        <Image source={require("../assets/email.png")} style={styles.icon} />
+        <Image source={require("../assets/delete.png")} style={styles.icon} />
+        <Image source={require("../assets/archive.png")} style={styles.icon} />
+      </View>
+    );
+  };
+
+  return (
+    <View style={{ margin: 10 }}>
+      {topContainer()} {/* Call the topContainer function */}
+      <View style={styles.headingDesign}>
+        <Text style={styles.headingText}>
+          {props?.route?.params?.item?.description1}
+        </Text>
+        <Image source={require("../assets/star.png")} style={styles.star} />
+      </View>
+      <View style={{ flexDirection: "row", marginLeft: 20 }}>
+        <Image
+          source={props?.route?.params?.item?.image}
+          style={styles.authorImage}
+        />
+        <View style={{ flexDirection: "column" }}>
+          <Text style={styles.author}>{props?.route?.params?.item?.title}</Text>
+          <Text style={{ fontSize: 10 }}>to me</Text>
+        </View>
+        <Text style={styles.time}>{props?.route?.params?.item?.time}</Text>
+        <View style={{ flexDirection: "row-reverse" }}>
+          <Image
+            source={require("../assets/dots.png")}
+            style={{ width: 18, height: 18, marginLeft: 25 }}
+          />
+          <Image
+            source={require("../assets/reply.png")}
+            style={{ width: 18, height: 18, marginLeft: 25 }}
+          />
+        </View>
+      </View>
+      <View style={styles.desContainer}>
+        <Text style={styles.description}>
+          {props?.route?.params?.item?.description2}
+        </Text>
+		<Text style={styles.description}>
+          {props?.route?.params?.item?.description2}
+        </Text>
+		<Text style={styles.description}>
+          {props?.route?.params?.item?.description2}
+        </Text>
+		<Text style={styles.description}>
+          {props?.route?.params?.item?.description2}
+        </Text>
+		<Text style={styles.description}>
+          {props?.route?.params?.item?.description2}
+        </Text>
+		<Text style={styles.description}>
+          {props?.route?.params?.item?.description2}
+        </Text>
+		<Text style={styles.description}>
+          {props?.route?.params?.item?.description2}
+        </Text>
+		<Text style={styles.description}>
+          {props?.route?.params?.item?.description2}
+        </Text>
+		<Text style={styles.description}>
+          {props?.route?.params?.item?.description2}
+        </Text>
+      </View>
+	  <View style={styles.footer}>
+		<Image source={require('../assets/reply.png')} style={styles.logo}/>
+		<Image source={require('../assets/forward.png')} style={styles.logo}/>
+	  </View>
+    </View>
+  );
 };
 
 export default ItemDetails;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  headingDesign: {
+    margin: 10,
+    alignSelf: "center",
+	paddingBottom:20
+  },
+  headingText: {
+    fontSize: 25,
+    fontWeight: "bold",
+  },
+  icon: {
+    width: 25,
+    height: 25,
+    marginLeft: 15,
+  },
+  topContainer: {
+    flexDirection: "row-reverse",
+    margin: 10,
+  },
+  author: {
+    fontFamily: "Google sans",
+    fontWeight: "600",
+    fontSize: 17,
+    marginRight: 5,
+  },
+  authorImage: {
+    width: 40,
+    height: 40,
+    marginRight: 10,
+  },
+  time: {
+    fontSize: 13,
+    fontWeight: "500",
+    marginLeft: 8,
+  },
+  star: {
+    width: 18,
+    height: 18,
+    position: "absolute",
+    bottom: 0,
+    right: 0,
+  },
+  description:{
+	fontSize:16,
+	fontFamily:"Arial",
+	alignSelf:'center',
+  },
+  desContainer:{
+	justifyContent:'center',
+	borderRadius:15,
+	margin:24,
+  },
+  footer: {
+    margin: 10,
+    backgroundColor: "#EFF4FA",
+    borderRadius: 30,
+    flexDirection: "row",
+	bottom:0
+  },
+  logo: {
+    width: 30,
+    height: 24,
+    margin: 10,
+    marginLeft: 60,
+    marginRight: 50,
+  },
+});
