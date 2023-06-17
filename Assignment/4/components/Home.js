@@ -12,7 +12,6 @@ import Constants from "expo-constants";
 import { SafeAreaView } from "react-native-web";
 
 export default function HomeScreen({ navigation }) {
-  
   const Mail = [
     {
       id: 1,
@@ -152,7 +151,7 @@ export default function HomeScreen({ navigation }) {
 
       <TouchableOpacity
         onPress={() => {
-          navigation.navigate("MyMail", {item});
+          navigation.navigate("MyMail", { item });
         }}
       >
         <View style={{ flexDirection: "column" }}>
@@ -182,7 +181,20 @@ export default function HomeScreen({ navigation }) {
         <TextInput style={styles.headingText} placeholder="Search in emails" />
         <Image source={require("../assets/profile.png")} style={styles.icon1} />
       </View>
-      <Text style={styles.text4}>Primary</Text>
+      <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
+        <Text style={styles.text4}>Primary</Text>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate("Settings");
+          }}
+          style={{ marginHorizontal: 15 }}
+        >
+            <Image
+              source={require("../assets/setting.png")}
+              style={styles.setting}
+            />
+        </TouchableOpacity>
+      </View>
       <FlatList
         data={Mail}
         renderItem={Item}
@@ -194,8 +206,8 @@ export default function HomeScreen({ navigation }) {
       </SafeAreaView>
     </View>
   );
+  
 }
-
 
 const styles = StyleSheet.create({
   container: {
@@ -277,6 +289,13 @@ const styles = StyleSheet.create({
   star: {
     width: 18,
     height: 18,
+    position: "absolute",
+    bottom: 1,
+    right: 0,
+  },
+  setting: {
+    width: 25,
+    height: 25,
     position: "absolute",
     bottom: 1,
     right: 0,
