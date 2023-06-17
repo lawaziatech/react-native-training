@@ -2,15 +2,11 @@ import React, {useState} from 'react';
 import { Text, View, StyleSheet, Image, FlatList,TextInput, TouchableOpacity } from 'react-native';
 import Constants from 'expo-constants';
 import { SafeAreaView } from 'react-native-web';
-import Details from './main';
 
-const Home = ({ navigation }) => {
-	const handlepress= () => {
-		console.log("Details");
-		navigation.navigate("Details");
+export default function HomeScreen ({ navigation }) {
+  const handlepress= () => {
+		navigation.navigate("GMail");
 	};
-}
-
 const Mail = [
   {
     id: 1,
@@ -134,13 +130,15 @@ const Mail = [
   },
 ];
 
-const Item = ({ item }) => (
+const Item = ({ item}) => (
+ 
   <View style={styles.item}>
   <Image source={item.image} style={styles.icon} />
 
   
   <View style={{flexDirection:'column'}}>
-  <TouchableOpacity onPress={() => navigation.navigate('Details')}>
+  navigation={navigation} 
+  <TouchableOpacity onPress={handlepress}>
 
     <Text style={styles.title}>{item.title}</Text>
     <Text style={styles.text2} >{item.description1.length>40?item.description1.substring(0,40)+'...':item.description1}</Text>
@@ -154,7 +152,6 @@ const Item = ({ item }) => (
   </View>
 );
 
-export default function HomeScreen () {
   return (
     <View style={styles.container}>
       <View style={styles.headingDesign}>
@@ -168,7 +165,7 @@ export default function HomeScreen () {
       <Text style={styles.text4}>Primary</Text>
       <FlatList 
       data={Mail} 
-      renderItem={Item} 
+      renderItem={Item}
       keyExtractor={(item) => item.id.toString()}
       />
       <SafeAreaView style={styles.footer}>

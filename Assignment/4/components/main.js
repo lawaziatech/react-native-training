@@ -1,19 +1,12 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import ItemDetails from "./ItemDetails";
-const Details = (props) => {
-  // const handlePress = () => {
-  // 	props.navigation.navigate("ItemDetails");
-  // };
-  return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={ItemDetails} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
+const Details = ({navigation}) => {
+  navigation.navigate('My Mail');
 };
+
 
 export default Details;
 
