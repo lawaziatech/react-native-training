@@ -2,23 +2,16 @@ import { StyleSheet, Text, View, Image } from "react-native";
 import React from "react";
 
 const ItemDetails = (props) => {
-  const topContainer = () => {
-    return (
-      <View style={styles.topContainer}>
-        <Image source={require("../assets/email.png")} style={styles.icon} />
-        <Image source={require("../assets/delete.png")} style={styles.icon} />
-        <Image source={require("../assets/archive.png")} style={styles.icon} />
-      </View>
-    );
-  };
+  const item = props.route.params.item;
+  const description1 = item ? item.description1 : "";
+  const description2 = item ? item.description2 : "";
+  const time = item ? item.time : "";
+  const title = item ? item.title : "";
 
   return (
     <View style={{ margin: 10 }}>
-      {topContainer()} {/* Call the topContainer function */}
       <View style={styles.headingDesign}>
-        <Text style={styles.headingText}>
-          {props?.route?.params?.item?.description1}
-        </Text>
+        <Text style={styles.headingText}>{description1}</Text>
         <Image source={require("../assets/star.png")} style={styles.star} />
       </View>
       <View style={{ flexDirection: "row", marginLeft: 20 }}>
@@ -27,7 +20,7 @@ const ItemDetails = (props) => {
           style={styles.authorImage}
         />
         <View style={{ flexDirection: "column" }}>
-          <Text style={styles.author}>{props?.route?.params?.item?.title}</Text>
+          <Text style={styles.author}>{title}</Text>
           <Text style={{ fontSize: 10 }}>to me</Text>
         </View>
         <Text style={styles.time}>{props?.route?.params?.item?.time}</Text>
@@ -43,38 +36,17 @@ const ItemDetails = (props) => {
         </View>
       </View>
       <View style={styles.desContainer}>
-        <Text style={styles.description}>
-          {props?.route?.params?.item?.description2}
-        </Text>
-		<Text style={styles.description}>
-          {props?.route?.params?.item?.description2}
-        </Text>
-		<Text style={styles.description}>
-          {props?.route?.params?.item?.description2}
-        </Text>
-		<Text style={styles.description}>
-          {props?.route?.params?.item?.description2}
-        </Text>
-		<Text style={styles.description}>
-          {props?.route?.params?.item?.description2}
-        </Text>
-		<Text style={styles.description}>
-          {props?.route?.params?.item?.description2}
-        </Text>
-		<Text style={styles.description}>
-          {props?.route?.params?.item?.description2}
-        </Text>
-		<Text style={styles.description}>
-          {props?.route?.params?.item?.description2}
-        </Text>
-		<Text style={styles.description}>
-          {props?.route?.params?.item?.description2}
-        </Text>
+        <Text style={styles.description}>{description2}</Text>
+        <Text style={styles.description}>{description2}</Text>
+        <Text style={styles.description}>{description2}</Text>
+        <Text style={styles.description}>{description2}</Text>
+        <Text style={styles.description}>{description2}</Text>
       </View>
-	  <View style={styles.footer}>
-		<Image source={require('../assets/reply.png')} style={styles.logo}/>
-		<Image source={require('../assets/forward.png')} style={styles.logo}/>
-	  </View>
+
+      <View style={styles.footer}>
+        <Image source={require("../assets/reply.png")} style={styles.logo} />
+        <Image source={require("../assets/forward.png")} style={styles.logo} />
+      </View>
     </View>
   );
 };
@@ -85,7 +57,7 @@ const styles = StyleSheet.create({
   headingDesign: {
     margin: 10,
     alignSelf: "center",
-	paddingBottom:20
+    paddingBottom: 20,
   },
   headingText: {
     fontSize: 25,
@@ -123,22 +95,22 @@ const styles = StyleSheet.create({
     bottom: 0,
     right: 0,
   },
-  description:{
-	fontSize:16,
-	fontFamily:"Arial",
-	alignSelf:'center',
+  description: {
+    fontSize: 16,
+    fontFamily: "Arial",
+    alignSelf: "center",
   },
-  desContainer:{
-	justifyContent:'center',
-	borderRadius:15,
-	margin:24,
+  desContainer: {
+    justifyContent: "center",
+    borderRadius: 15,
+    margin: 24,
   },
   footer: {
     margin: 10,
     backgroundColor: "#EFF4FA",
     borderRadius: 30,
     flexDirection: "row",
-	bottom:0
+    bottom: 0,
   },
   logo: {
     width: 30,

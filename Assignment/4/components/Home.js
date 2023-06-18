@@ -7,9 +7,10 @@ import {
   FlatList,
   TextInput,
   TouchableOpacity,
+  SafeAreaView,
 } from "react-native";
 import Constants from "expo-constants";
-import { SafeAreaView } from "react-native-web";
+// import {  } from "react-native-web";
 
 export default function HomeScreen({ navigation }) {
   const Mail = [
@@ -157,13 +158,13 @@ export default function HomeScreen({ navigation }) {
         <View style={{ flexDirection: "column" }}>
           <Text style={styles.title}>{item.title}</Text>
           <Text style={styles.text2}>
-            {item.description1.length > 40
-              ? item.description1.substring(0, 40) + "..."
+            {item.description1.length > 30
+              ? item.description1.substring(0, 30) + "..."
               : item.description1}
           </Text>
           <Text style={styles.text3}>
-            {item.description2.length > 40
-              ? item.description2.substring(0, 38) + "..."
+            {item.description2.length > 30
+              ? item.description2.substring(0, 30) + "..."
               : item.description2}
           </Text>
         </View>
@@ -189,10 +190,10 @@ export default function HomeScreen({ navigation }) {
           }}
           style={{ marginHorizontal: 15 }}
         >
-            <Image
-              source={require("../assets/setting.png")}
-              style={styles.setting}
-            />
+          <Image
+            source={require("../assets/setting.png")}
+            style={styles.setting}
+          />
         </TouchableOpacity>
       </View>
       <FlatList
@@ -206,7 +207,6 @@ export default function HomeScreen({ navigation }) {
       </SafeAreaView>
     </View>
   );
-  
 }
 
 const styles = StyleSheet.create({

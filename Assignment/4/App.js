@@ -17,7 +17,6 @@ function Mail() {
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="MyMail" component={ItemDetails} />
         <Stack.Screen name="Settings" component={Setting} />
-
       </Stack.Navigator>
     </NavigationContainer>
   );
