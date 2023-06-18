@@ -27,7 +27,7 @@ const Mail = (props) => {
   );
 };
 
-export default function Mail() {
+export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.headingDesign}>
