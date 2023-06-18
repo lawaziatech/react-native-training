@@ -9,18 +9,18 @@ const ItemDetails = (props) => {
   const title = item ? item.title : "";
 
   return (
-    <View style={{ margin: 10 }}>
+    <View style={{ margin: 5, justifyContent:'space-between'}}>
       <View style={styles.headingDesign}>
         <Text style={styles.headingText}>{description1}</Text>
         <Image source={require("../assets/star.png")} style={styles.star} />
       </View>
-      <View style={{ flexDirection: "row", marginLeft: 20 }}>
+      <View style={{ flexDirection: "row", justifyContent:'flex-end',justifyContent:'space-evenly'}}>
         <Image
           source={props?.route?.params?.item?.image}
           style={styles.authorImage}
         />
         <View style={{ flexDirection: "column" }}>
-          <Text style={styles.author}>{title}</Text>
+          <Text style={styles.author}>{title.length>12?title.substring(0,12)+'..':title}</Text>
           <Text style={{ fontSize: 10 }}>to me</Text>
         </View>
         <Text style={styles.time}>{props?.route?.params?.item?.time}</Text>
@@ -56,12 +56,13 @@ export default ItemDetails;
 const styles = StyleSheet.create({
   headingDesign: {
     margin: 10,
-    alignSelf: "center",
-    paddingBottom: 20,
+    paddingBottom: 10,
+    flexDirection:'row'
   },
   headingText: {
     fontSize: 25,
     fontWeight: "bold",
+    padding:15,
   },
   icon: {
     width: 25,
@@ -73,6 +74,8 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   author: {
+    flexDirection:'row',
+    flexWrap:'wrap',
     fontFamily: "Google sans",
     fontWeight: "600",
     fontSize: 17,
@@ -103,14 +106,14 @@ const styles = StyleSheet.create({
   desContainer: {
     justifyContent: "center",
     borderRadius: 15,
-    margin: 24,
+    margin:10,
   },
   footer: {
     margin: 10,
     backgroundColor: "#EFF4FA",
     borderRadius: 30,
     flexDirection: "row",
-    bottom: 0,
+    justifyContent:'space-between'
   },
   logo: {
     width: 30,
