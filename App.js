@@ -8,7 +8,7 @@ export default function App() {
   return (
     //<Contacts/>
     //<Gmail_Clone/>
-    // <Counter_App/>
+    //<Counter_App/>
     <Mail />
   );
 }
