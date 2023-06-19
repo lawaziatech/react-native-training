@@ -1,9 +1,20 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity, Image} from "react-native";
 import React from "react";
 
-const Setting = () => {
+const Setting = (props) => {
   return (
     <View style={styles.container}>
+      <TouchableOpacity
+        onPress={() => {
+          props.navigation.goBack();
+        }}
+      >
+        <Image
+          source={require("../assets/back.png")}
+          style={styles.back}
+        />
+      </TouchableOpacity>
+
       <Text style={styles.setText}>General Settings</Text>
       <Text style={styles.setText}>Privacy & Security</Text>
       <Text style={styles.setText}>Account Settings</Text>
@@ -29,5 +40,12 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "bold",
     padding: 20,
+  },
+  back: {
+    width: 30,
+    height: 25,
+    paddingVertical:15,
+    margin:15,
+    marginLeft:7
   },
 });

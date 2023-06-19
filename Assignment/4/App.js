@@ -14,9 +14,9 @@ function Mail() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="MyMail" component={ItemDetails} />
-        <Stack.Screen name="Settings" component={Setting} />
+        <Stack.Screen name="Home" component={HomeScreen} options={{headerShown: false}}/>
+        <Stack.Screen name="MyMail" component={ItemDetails} options={{headerShown: false}}/>
+        <Stack.Screen name="Settings" component={Setting} options={{headerShown: false}}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

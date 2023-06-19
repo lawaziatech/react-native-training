@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import React from "react";
 
 const ItemDetails = (props) => {
@@ -9,18 +9,38 @@ const ItemDetails = (props) => {
   const title = item ? item.title : "";
 
   return (
-    <View style={{ margin: 5, justifyContent:'space-between'}}>
+    <View style={{ margin: 5, justifyContent: "space-between" }}>
+      <View style={styles.topContainer}>
+        <Image source={require("../assets/dots.png")} style={styles.icon} />
+        <Image source={require("../assets/delete.png")} style={styles.icon} />
+        <Image source={require("../assets/archive.png")} style={styles.icon} />
+        <TouchableOpacity
+          onPress={() => {
+            props.navigation.goBack();
+          }}
+        >
+          <Image source={require("../assets/back.png")} style={styles.back} />
+        </TouchableOpacity>
+      </View>
       <View style={styles.headingDesign}>
         <Text style={styles.headingText}>{description1}</Text>
         <Image source={require("../assets/star.png")} style={styles.star} />
       </View>
-      <View style={{ flexDirection: "row", justifyContent:'flex-end',justifyContent:'space-evenly'}}>
+      <View
+        style={{
+          flexDirection: "row",
+          justifyContent: "flex-end",
+          justifyContent: "space-evenly",
+        }}
+      >
         <Image
           source={props?.route?.params?.item?.image}
           style={styles.authorImage}
         />
         <View style={{ flexDirection: "column" }}>
-          <Text style={styles.author}>{title.length>12?title.substring(0,12)+'..':title}</Text>
+          <Text style={styles.author}>
+            {title.length > 12 ? title.substring(0, 12) + ".." : title}
+          </Text>
           <Text style={{ fontSize: 10 }}>to me</Text>
         </View>
         <Text style={styles.time}>{props?.route?.params?.item?.time}</Text>
@@ -57,12 +77,12 @@ const styles = StyleSheet.create({
   headingDesign: {
     margin: 10,
     paddingBottom: 10,
-    flexDirection:'row'
+    flexDirection: "row",
   },
   headingText: {
     fontSize: 25,
     fontWeight: "bold",
-    padding:15,
+    padding: 15,
   },
   icon: {
     width: 25,
@@ -71,11 +91,11 @@ const styles = StyleSheet.create({
   },
   topContainer: {
     flexDirection: "row-reverse",
-    margin: 10,
+    margin: 30,
   },
   author: {
-    flexDirection:'row',
-    flexWrap:'wrap',
+    flexDirection: "row",
+    flexWrap: "wrap",
     fontFamily: "Google sans",
     fontWeight: "600",
     fontSize: 17,
@@ -106,14 +126,14 @@ const styles = StyleSheet.create({
   desContainer: {
     justifyContent: "center",
     borderRadius: 15,
-    margin:10,
+    margin: 10,
   },
   footer: {
     margin: 10,
     backgroundColor: "#EFF4FA",
     borderRadius: 30,
     flexDirection: "row",
-    justifyContent:'space-between'
+    justifyContent: "space-between",
   },
   logo: {
     width: 30,
@@ -121,5 +141,11 @@ const styles = StyleSheet.create({
     margin: 10,
     marginLeft: 60,
     marginRight: 50,
+  },
+  back: {
+    width: 30,
+    height: 25,
+    paddingVertical:15,
+    marginEnd:100,
   },
 });
