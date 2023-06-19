@@ -30,7 +30,7 @@ const Counter = () => {
   );
 };
 
-export default function App() {
+export default function CounterApp() {
   return (
     
     <View style={styles.appContainer}>

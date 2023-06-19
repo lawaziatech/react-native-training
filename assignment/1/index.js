@@ -2,7 +2,7 @@ import React from 'react'
 import { Text, View,SafeAreaView,TextInput,Image,StyleSheet,ScrollView } from 'react-native';
 import Constants from 'expo-constants';
 
-const Contact=()=>{
+export default function Contact(){
 
   return (
     <SafeAreaView style ={styles.container}>
@@ -265,5 +265,4 @@ addIcon:{
        marginTop: 20,
        flexDirection: 'row',}
         });
-export default Contact;
 
