@@ -13,11 +13,11 @@ import {TouchableOpacity as TO }from 'react-native-gesture -handler';
 import {NavigationContainer,useIsFocussed} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import HomeScreen from "./Components/Home";
-import MailScreen from "./Components/Mail";
-import Settings from "./Components/Settings";
+import HomeScreen from "./components/Home";
+import MailScreen from "./components/Mail";
+import Settings from "./components/Settings";
 
-const stack= createNativeStackNavigator();
+const Stack= createNativeStackNavigator();
 
  const Mail=()=> {
     return (
