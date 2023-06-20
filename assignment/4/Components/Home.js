@@ -16,7 +16,7 @@ export default function HomeScreen({ navigation }) {
   const emails = [
     {
       id: 1,
-      profile: require('./h.png'),
+      profile: require('./i.png'),
       head: 'Internshala Trainings',
       subject: 'Mahima, new internships in  ... ',
       content:
@@ -27,7 +27,7 @@ export default function HomeScreen({ navigation }) {
 
     {
       id: 2,
-      profile: require('./r.png'),
+      profile: require('./gggg.png'),
       head: 'Goggle',
       subject: 'Your Google Account was recovered su...',
       content: 'Account recovered successfully 12345....',
@@ -37,7 +37,7 @@ export default function HomeScreen({ navigation }) {
 
     {
       id: 3,
-      profile: require('./x.png'),
+      profile: require('./mmm.png'),
       head: 'Myntra',
       subject: 'Press This Button For Freshness... ',
       content:
@@ -48,7 +48,7 @@ export default function HomeScreen({ navigation }) {
 
     {
       id: 4,
-      profile: require('./l.png'),
+      profile: require('./mmm.png'),
       head: 'Microsoft account team',
       subject: 'Verify your email address...',
       content:
@@ -59,7 +59,7 @@ export default function HomeScreen({ navigation }) {
 
     {
       id: 5,
-      profile: require('./h.png'),
+      profile: require('./gggg.png'),
       head: 'GitHub',
       subject: 'A first-party GitHub OAuth application has ...',
       content: 'Hey Mahimatestgithub!A first-party GitHub OAuth application...',
@@ -69,7 +69,7 @@ export default function HomeScreen({ navigation }) {
 
     {
       id: 6,
-      profile: require('./r.png'),
+      profile: require('./ccc.png'),
       head: 'Coding Ninjas',
       subject: 'Secure your tech future: with up to 100% scholarship...',
       content: 'Dear Mahima, Register for the grand summer scholarship...',
@@ -79,7 +79,7 @@ export default function HomeScreen({ navigation }) {
 
     {
       id: 7,
-      profile: require('./a.png'),
+      profile: require('./ccc.png'),
       head: 'Career Camp',
       subject: 'Mahima, code with Pride this month...',
       content:
@@ -90,7 +90,7 @@ export default function HomeScreen({ navigation }) {
 
     {
       id: 8,
-      profile: require('./h.png'),
+      profile: require('./s.png'),
       head: 'Success Story',
       subject: 'Mahima,you will be surprised to hear about...',
       content: 'Dear Karan Kr,	 Recently your AdobeID password has changed.',
@@ -100,7 +100,7 @@ export default function HomeScreen({ navigation }) {
 
     {
       id: 9,
-      profile: require('./r.png'),
+      profile: require('./aa.png'),
       head: 'Amazo web services',
       subject: 'Explore free AWS Training and Certification resources',
       content:
@@ -111,7 +111,7 @@ export default function HomeScreen({ navigation }) {
 
     {
       id: 10,
-      profile: require('./x.png'),
+      profile: require('./u.png'),
       head: 'Udemy',
       subject: 'You are there.Start your prep...',
       content:
@@ -155,11 +155,11 @@ export default function HomeScreen({ navigation }) {
         <View style={styles.InnerContainer}>
           <View style={styles.searchBar}>
             <TouchableOpacity style={styles.menuContainer} onPress={() => navigation.openDrawer()}>
-              <Image style={styles.menu} source={require('./menu.png')} />
+              <Image style={styles.menu} source={require('./menuu.png')} />
             </TouchableOpacity>
             <TextInput style={styles.input} placeholder="Search in emails" />
             <View style={styles.profileContainer}>
-              <Image style={styles.profile} source={require('./profile.jpg')} />
+              <Image style={styles.profile} source={require('./profile.png')} />
             </View>
           </View>
 
@@ -200,7 +200,7 @@ export default function HomeScreen({ navigation }) {
         <View style={styles.messageBox}>
           <Image source={require('./message.png')} style={styles.messageIcon} />
         </View>
-        <Image source={require('./zoom.png')} style={styles.ZoomIcon} />
+        <Image source={require('./meet.png')} style={styles.MeetIcon} />
       </View>
     </SafeAreaView>
   );
@@ -366,7 +366,7 @@ const styles = StyleSheet.create({
     opacity: 0.7,
   },
 
-  ZoomIcon: {
+  MeetIcon: {
     height: 32,
     width: 30,
     marginLeft: 100,
