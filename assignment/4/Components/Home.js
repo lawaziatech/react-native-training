@@ -37,7 +37,7 @@ export default function HomeScreen({ navigation }) {
 
     {
       id: 3,
-      profile: require('../mmm.png'),
+      profile: require('../my.png'),
       head: 'Myntra',
       subject: 'Press This Button For Freshness... ',
       content:
@@ -48,7 +48,7 @@ export default function HomeScreen({ navigation }) {
 
     {
       id: 4,
-      profile: require('../mmm.png'),
+      profile: require('../my.png'),
       head: 'Microsoft account team',
       subject: 'Verify your email address...',
       content:
@@ -305,8 +305,8 @@ const styles = StyleSheet.create({
     alignItem: 'center',
     justifyContent: 'center',
     opacity: 0.7,
-    borderTopLeftRadius: '50%',
-    borderBottomLeftRadius: '50%',
+    //borderTopLeftRadius: '50%',
+   // borderBottomLeftRadius: '50%',
     paddingLeft: 15,
   },
 
