@@ -21,13 +21,13 @@ const MailScreen = (props) => {
             onPress={() => {
               props.navigation.goBack();
             }}>
-            <Image source={require('./back.png')} style={styles.HeadImage} />
+            <Image source={require('./backimg.png')} style={styles.HeadImage} />
           </TouchableOpacity>
           <View style={styles.RightImage}>
-            <Image source={require('./archive.png')} style={styles.HeadImage} />
+            <Image source={require('./ar.png')} style={styles.HeadImage} />
             <Image source={require('./delete.png')} style={styles.HeadImage} />
             <Image
-              source={require('./messageButton.png')}
+              source={require('./mb.png')}
               style={styles.HeadImage}
             />
           </View>
@@ -83,7 +83,7 @@ const MailScreen = (props) => {
 
           <TouchableOpacity style={styles.ButtonNav}>
             <Text style={styles.navText}>reply all</Text>
-            <Image source={require('./replyAll.png')} style={styles.arrow} />
+            <Image source={require('./replyall.png')} style={styles.arrow} />
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.ButtonNav}>
@@ -97,7 +97,7 @@ const MailScreen = (props) => {
         <View style={styles.messageBottomBox}>
           <Image source={require('./message.png')} style={styles.messageIcon} />
         </View>
-        <Image source={require('./zoom.png')} style={styles.ZoomIcon} />
+        <Image source={require('./meet.png')} style={styles.MeetIcon} />
       </View>
     </View>
   );
@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
 
-  ZoomIcon: {
+  MeetIcon: {
     height: 32,
     width: 30,
     marginLeft: 100,

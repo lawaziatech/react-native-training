@@ -37,7 +37,7 @@ const settingScreen = (props) => {
             onPress={() => {
               props.navigation.goBack();
             }}>
-            <Image source={require("../assets/backimg.png")} style={styles.HeadImage} />
+            <Image source={require("./backimg.png")} style={styles.HeadImage} />
           </TouchableOpacity>
           <Text style={styles.dot}>Settings</Text>
         </View>
