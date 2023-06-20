@@ -21,13 +21,13 @@ const MailScreen = (props) => {
             onPress={() => {
               props.navigation.goBack();
             }}>
-            <Image source={require('./backimg.png')} style={styles.HeadImage} />
+            <Image source={require('../backimg.png')} style={styles.HeadImage} />
           </TouchableOpacity>
           <View style={styles.RightImage}>
-            <Image source={require('./ar.png')} style={styles.HeadImage} />
-            <Image source={require('./delete.png')} style={styles.HeadImage} />
+            <Image source={require('../ar.png')} style={styles.HeadImage} />
+            <Image source={require('../delete.png')} style={styles.HeadImage} />
             <Image
-              source={require('./mb.png')}
+              source={require('../mb.png')}
               style={styles.HeadImage}
             />
           </View>
@@ -78,26 +78,26 @@ const MailScreen = (props) => {
         <View style={styles.ArrowNav}>
           <TouchableOpacity style={styles.ButtonNav}>
             <Text style={styles.navText}>reply</Text>
-            <Image source={require('./reply.png')} style={styles.arrow} />
+            <Image source={require('../reply.png')} style={styles.arrow} />
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.ButtonNav}>
             <Text style={styles.navText}>reply all</Text>
-            <Image source={require('./replyall.png')} style={styles.arrow} />
+            <Image source={require('../replyall.png')} style={styles.arrow} />
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.ButtonNav}>
             <Text style={styles.navText}>forward</Text>
-            <Image source={require('./forward.png')} style={styles.arrow} />
+            <Image source={require('../forward.png')} style={styles.arrow} />
           </TouchableOpacity>
         </View>
       </View>
 
       <View style={styles.footer}>
         <View style={styles.messageBottomBox}>
-          <Image source={require('./message.png')} style={styles.messageIcon} />
+          <Image source={require('../message.png')} style={styles.messageIcon} />
         </View>
-        <Image source={require('./meet.png')} style={styles.MeetIcon} />
+        <Image source={require('../meet.png')} style={styles.MeetIcon} />
       </View>
     </View>
   );

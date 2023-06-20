@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import Constants from 'expo-constants';
 
-const settingScreen = (props) => {
+export default function settingScreen(props) {
   const settings = [
     { id: '1', name: 'General settings' },
     { id: '2', name: 'mahimagupta22@Gmail.com' },
@@ -37,7 +37,7 @@ const settingScreen = (props) => {
             onPress={() => {
               props.navigation.goBack();
             }}>
-            <Image source={require("./backimg.png")} style={styles.HeadImage} />
+            <Image source={require("../backimg.png")} style={styles.HeadImage} />
           </TouchableOpacity>
           <Text style={styles.dot}>Settings</Text>
         </View>
@@ -57,7 +57,7 @@ const settingScreen = (props) => {
   );
 };
 
-export default settingScreen;
+
 
 const styles = StyleSheet.create({
   container: {
