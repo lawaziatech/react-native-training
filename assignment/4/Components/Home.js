@@ -16,108 +16,108 @@ export default function HomeScreen({ navigation }) {
   const emails = [
     {
       id: 1,
-      profile: require('./i.png'),
+      profile: require('../i.png'),
       head: 'Internshala Trainings',
       subject: 'Mahima, new internships in  ... ',
       content:
         'Internshala Hi Mahima,Here are some....',
       date: '18 Jun',
-      star: require('./star.png'),
+      star: require('../star.png'),
     },
 
     {
       id: 2,
-      profile: require('./gggg.png'),
+      profile: require('../gggg.png'),
       head: 'Goggle',
       subject: 'Your Google Account was recovered su...',
       content: 'Account recovered successfully 12345....',
       date: '17 Jun',
-      star: require('./star1.png'),
+      star: require('../star.png'),
     },
 
     {
       id: 3,
-      profile: require('./mmm.png'),
+      profile: require('../mmm.png'),
       head: 'Myntra',
       subject: 'Press This Button For Freshness... ',
       content:
         'New Launches Are Waiting For You... ',
       date: '16 Jun',
-      star: require('./star1.png'),
+      star: require('../star.png'),
     },
 
     {
       id: 4,
-      profile: require('./mmm.png'),
+      profile: require('../mmm.png'),
       head: 'Microsoft account team',
       subject: 'Verify your email address...',
       content:
         'Microsoft account Verify your email ad...',
       date: '15 Jun',
-      star: require('./star.png'),
+      star: require('../star.png'),
     },
 
     {
       id: 5,
-      profile: require('./gggg.png'),
+      profile: require('../gggg.png'),
       head: 'GitHub',
       subject: 'A first-party GitHub OAuth application has ...',
       content: 'Hey Mahimatestgithub!A first-party GitHub OAuth application...',
       date: '10 Jun',
-      star: require('./star.png'),
+      star: require('../star.png'),
     },
 
     {
       id: 6,
-      profile: require('./ccc.png'),
+      profile: require('../ccc.png'),
       head: 'Coding Ninjas',
       subject: 'Secure your tech future: with up to 100% scholarship...',
       content: 'Dear Mahima, Register for the grand summer scholarship...',
       date: '8 Jun',
-      star: require('./star1.png'),
+      star: require('../star.png'),
     },
 
     {
       id: 7,
-      profile: require('./ccc.png'),
+      profile: require('../ccc.png'),
       head: 'Career Camp',
       subject: 'Mahima, code with Pride this month...',
       content:
         'Skills never discriminate neither does love...',
       date: '8 Jun',
-      star: require('./star.png'),
+      star: require('../star.png'),
     },
 
     {
       id: 8,
-      profile: require('./s.png'),
+      profile: require('../ss.png'),
       head: 'Success Story',
       subject: 'Mahima,you will be surprised to hear about...',
       content: 'Dear Karan Kr,	 Recently your AdobeID password has changed.',
       date: '7 Jun',
-      star: require('./star.png'),
+      star: require('../star.png'),
     },
 
     {
       id: 9,
-      profile: require('./aa.png'),
+      profile: require('../aa.png'),
       head: 'Amazo web services',
       subject: 'Explore free AWS Training and Certification resources',
       content:
         'Focus on the cloud skills and services that are most relevant to you across 30+ AWS solutions',
       date: '7 Jun',
-      star: require('./star1.png'),
+      star: require('../star.png'),
     },
 
     {
       id: 10,
-      profile: require('./u.png'),
+      profile: require('../u.png'),
       head: 'Udemy',
       subject: 'You are there.Start your prep...',
       content:
         'Thanks for choosing to learn with us...',
       date: '6 Jun',
-      star: require('./star1.png'),
+      star: require('../star.png'),
     },
   ];
 
@@ -155,11 +155,11 @@ export default function HomeScreen({ navigation }) {
         <View style={styles.InnerContainer}>
           <View style={styles.searchBar}>
             <TouchableOpacity style={styles.menuContainer} onPress={() => navigation.openDrawer()}>
-              <Image style={styles.menu} source={require('./menuu.png')} />
+              <Image style={styles.menu} source={require('../menuu.png')} />
             </TouchableOpacity>
             <TextInput style={styles.input} placeholder="Search in emails" />
             <View style={styles.profileContainer}>
-              <Image style={styles.profile} source={require('./profile.png')} />
+              <Image style={styles.profile} source={require('../profile.png')} />
             </View>
           </View>
 
@@ -171,7 +171,7 @@ export default function HomeScreen({ navigation }) {
               <TouchableOpacity>
                 <Image
                   style={styles.refreshIcon}
-                  source={require('./refresh.png')}
+                  source={require('../refresh.png')}
                 />
               </TouchableOpacity>
               <Text style={styles.Primary2}>
@@ -198,9 +198,9 @@ export default function HomeScreen({ navigation }) {
 
       <View style={styles.footer}>
         <View style={styles.messageBox}>
-          <Image source={require('./message.png')} style={styles.messageIcon} />
+          <Image source={require('../message.png')} style={styles.messageIcon} />
         </View>
-        <Image source={require('./meet.png')} style={styles.MeetIcon} />
+        <Image source={require('../meet.png')} style={styles.MeetIcon} />
       </View>
     </SafeAreaView>
   );

@@ -1,15 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
- import Contact from './assignment/1/index';
+//  import Contact from './assignment/1/index';
 // import Email from './assignment/2/App';
 //import CounterApp from './assignment/3/App';
-import Mail from './assignment/4/App';
+// import Mail from './assignment/4/App';
+import HomeScreen from './assignment/4/components/Home';
 export default function App() {
   return (
-     <Contact/>
+    //  <Contact/>
     // <Email/>
    // <CounterApp/>
-   //<Mail/>
+  //  <Mail/>
+  <HomeScreen/>
   )
 }
 
