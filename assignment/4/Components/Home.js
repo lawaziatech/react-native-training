@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from "react";
 import {
   Text,
   View,
@@ -9,13 +9,14 @@ import {
   SafeAreaView,
   TouchableOpacity,
   FlatList,
-} from 'react-native';
-import Constants from 'expo-constants';
+} from "react-native";
+import Constants from "expo-constants";
 
 export default function HomeScreen({ navigation }) {
   const emails = [
     {
       id: 1,
+<<<<<<< HEAD
       profile: require('../i.png'),
       head: 'Internshala Trainings',
       subject: 'Mahima, new internships in  ... ',
@@ -23,20 +24,38 @@ export default function HomeScreen({ navigation }) {
         'Internshala Hi Mahima,Here are some....',
       date: '18 Jun',
       star: require('../star.png'),
+=======
+      profile: require("../i.png"),
+      head: "Internshala Trainings",
+      subject: "Mahima, new internships in  ... ",
+      content: "Internshala Hi Mahima,Here are some....",
+      date: "18 Jun",
+      star: require("../str.png"),
+>>>>>>> 03e73c1c6cbb32f79ef3b96f11198167bf0605c4
     },
 
     {
       id: 2,
+<<<<<<< HEAD
       profile: require('../gggg.png'),
       head: 'Goggle',
       subject: 'Your Google Account was recovered su...',
       content: 'Account recovered successfully 12345....',
       date: '17 Jun',
       star: require('../star.png'),
+=======
+      profile: require("../gggg.png"),
+      head: "Goggle",
+      subject: "Your Google Account was recovered su...",
+      content: "Account recovered successfully 12345....",
+      date: "17 Jun",
+      star: require("../str.png"),
+>>>>>>> 03e73c1c6cbb32f79ef3b96f11198167bf0605c4
     },
 
     {
       id: 3,
+<<<<<<< HEAD
       profile: require('../my.png'),
       head: 'Myntra',
       subject: 'Press This Button For Freshness... ',
@@ -44,10 +63,19 @@ export default function HomeScreen({ navigation }) {
         'New Launches Are Waiting For You... ',
       date: '16 Jun',
       star: require('../star.png'),
+=======
+      profile: require("../my.png"),
+      head: "Myntra",
+      subject: "Press This Button For Freshness... ",
+      content: "New Launches Are Waiting For You... ",
+      date: "16 Jun",
+      star: require("../str.png"),
+>>>>>>> 03e73c1c6cbb32f79ef3b96f11198167bf0605c4
     },
 
     {
       id: 4,
+<<<<<<< HEAD
       profile: require('../my.png'),
       head: 'Microsoft account team',
       subject: 'Verify your email address...',
@@ -55,30 +83,57 @@ export default function HomeScreen({ navigation }) {
         'Microsoft account Verify your email ad...',
       date: '15 Jun',
       star: require('../star.png'),
+=======
+      profile: require("../my.png"),
+      head: "Microsoft account team",
+      subject: "Verify your email address...",
+      content: "Microsoft account Verify your email ad...",
+      date: "15 Jun",
+      star: require("../str.png"),
+>>>>>>> 03e73c1c6cbb32f79ef3b96f11198167bf0605c4
     },
 
     {
       id: 5,
+<<<<<<< HEAD
       profile: require('../gggg.png'),
       head: 'GitHub',
       subject: 'A first-party GitHub OAuth application has ...',
       content: 'Hey Mahimatestgithub!A first-party GitHub OAuth application...',
       date: '10 Jun',
       star: require('../star.png'),
+=======
+      profile: require("../gggg.png"),
+      head: "GitHub",
+      subject: "A first-party GitHub OAuth application has ...",
+      content: "Hey Mahimatestgithub!A first-party GitHub OAuth application...",
+      date: "10 Jun",
+      star: require("../str.png"),
+>>>>>>> 03e73c1c6cbb32f79ef3b96f11198167bf0605c4
     },
 
     {
       id: 6,
+<<<<<<< HEAD
       profile: require('../ccc.png'),
       head: 'Coding Ninjas',
       subject: 'Secure your tech future: with up to 100% scholarship...',
       content: 'Dear Mahima, Register for the grand summer scholarship...',
       date: '8 Jun',
       star: require('../star.png'),
+=======
+      profile: require("../ccc.png"),
+      head: "Coding Ninjas",
+      subject: "Secure your tech future: with up to 100% scholarship...",
+      content: "Dear Mahima, Register for the grand summer scholarship...",
+      date: "8 Jun",
+      star: require("../str.png"),
+>>>>>>> 03e73c1c6cbb32f79ef3b96f11198167bf0605c4
     },
 
     {
       id: 7,
+<<<<<<< HEAD
       profile: require('../ccc.png'),
       head: 'Career Camp',
       subject: 'Mahima, code with Pride this month...',
@@ -86,31 +141,55 @@ export default function HomeScreen({ navigation }) {
         'Skills never discriminate neither does love...',
       date: '8 Jun',
       star: require('../star.png'),
+=======
+      profile: require("../ccc.png"),
+      head: "Career Camp",
+      subject: "Mahima, code with Pride this month...",
+      content: "Skills never discriminate neither does love...",
+      date: "8 Jun",
+      star: require("../str.png"),
+>>>>>>> 03e73c1c6cbb32f79ef3b96f11198167bf0605c4
     },
 
     {
       id: 8,
+<<<<<<< HEAD
       profile: require('../ss.png'),
       head: 'Success Story',
       subject: 'Mahima,you will be surprised to hear about...',
       content: 'Dear Karan Kr,	 Recently your AdobeID password has changed.',
       date: '7 Jun',
       star: require('../star.png'),
+=======
+      profile: require("../ss.png"),
+      head: "Success Story",
+      subject: "Mahima,you will be surprised to hear about...",
+      content: "Dear Karan Kr,	 Recently your AdobeID password has changed.",
+      date: "7 Jun",
+      star: require("../str.png"),
+>>>>>>> 03e73c1c6cbb32f79ef3b96f11198167bf0605c4
     },
 
     {
       id: 9,
-      profile: require('../aa.png'),
-      head: 'Amazo web services',
-      subject: 'Explore free AWS Training and Certification resources',
+      profile: require("../aa.png"),
+      head: "Amazo web services",
+      subject: "Explore free AWS Training and Certification resources",
       content:
+<<<<<<< HEAD
         'Focus on the cloud skills and services that are most relevant to you across 30+ AWS solutions',
       date: '7 Jun',
       star: require('../star.png'),
+=======
+        "Focus on the cloud skills and services that are most relevant to you across 30+ AWS solutions",
+      date: "7 Jun",
+      star: require("../str.png"),
+>>>>>>> 03e73c1c6cbb32f79ef3b96f11198167bf0605c4
     },
 
     {
       id: 10,
+<<<<<<< HEAD
       profile: require('../u.png'),
       head: 'Udemy',
       subject: 'You are there.Start your prep...',
@@ -118,6 +197,14 @@ export default function HomeScreen({ navigation }) {
         'Thanks for choosing to learn with us...',
       date: '6 Jun',
       star: require('../star.png'),
+=======
+      profile: require("../u.png"),
+      head: "Udemy",
+      subject: "You are there.Start your prep...",
+      content: "Thanks for choosing to learn with us...",
+      date: "6 Jun",
+      star: require("../str.png"),
+>>>>>>> 03e73c1c6cbb32f79ef3b96f11198167bf0605c4
     },
   ];
 
@@ -125,8 +212,9 @@ export default function HomeScreen({ navigation }) {
     <TouchableOpacity
       style={styles.mail}
       onPress={() => {
-        navigation.navigate('MailBox', { item });
-      }}>
+        navigation.navigate("Mail", { item });
+      }}
+    >
       <View style={styles.mailImage}>
         <Image source={item.profile} style={styles.logo} />
       </View>
@@ -154,12 +242,20 @@ export default function HomeScreen({ navigation }) {
       <ScrollView style={styles.scrollView}>
         <View style={styles.InnerContainer}>
           <View style={styles.searchBar}>
-            <TouchableOpacity style={styles.menuContainer} onPress={() => navigation.openDrawer()}>
-              <Image style={styles.menu} source={require('../menuu.png')} />
+            <TouchableOpacity
+              style={styles.menuContainer}
+              onPress={() => {
+                navigation.navigate("Settings");
+              }}
+            >
+              <Image style={styles.menu} source={require("../menuu.png")} />
             </TouchableOpacity>
             <TextInput style={styles.input} placeholder="Search in emails" />
             <View style={styles.profileContainer}>
-              <Image style={styles.profile} source={require('../profile.png')} />
+              <Image
+                style={styles.profile}
+                source={require("../profile.png")}
+              />
             </View>
           </View>
 
@@ -171,15 +267,16 @@ export default function HomeScreen({ navigation }) {
               <TouchableOpacity>
                 <Image
                   style={styles.refreshIcon}
-                  source={require('../refresh.png')}
+                  source={require("../refresh.png")}
                 />
               </TouchableOpacity>
               <Text style={styles.Primary2}>
                 Tap a sender image to select that conversation.
               </Text>
               <TouchableOpacity
-                onPress={() => Linking.openURL('http://google.com')}>
-                <Text style={{ color: 'skyblue' }}>Dismiss</Text>
+                onPress={() => Linking.openURL("http://google.com")}
+              >
+                <Text style={{ color: "skyblue" }}>Dismiss</Text>
               </TouchableOpacity>
             </View>
           </View>
@@ -198,9 +295,12 @@ export default function HomeScreen({ navigation }) {
 
       <View style={styles.footer}>
         <View style={styles.messageBox}>
-          <Image source={require('../message.png')} style={styles.messageIcon} />
+          <Image
+            source={require("../message.png")}
+            style={styles.messageIcon}
+          />
         </View>
-        <Image source={require('../meet.png')} style={styles.MeetIcon} />
+        <Image source={require("../meet.png")} style={styles.MeetIcon} />
       </View>
     </SafeAreaView>
   );
@@ -209,7 +309,7 @@ export default function HomeScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     height: 680,
-    backgroundColor: '#181818',
+    backgroundColor: "#181818",
   },
 
   InnerContainer: {
@@ -223,27 +323,27 @@ const styles = StyleSheet.create({
   },
 
   input: {
-    textAlign: 'center',
+    textAlign: "center",
     height: 40,
-    backgroundColor: '#3C3E3F',
-    placeholderTextColor: 'white',
+    backgroundColor: "#3C3E3F",
+    placeholderTextColor: "white",
     opacity: 0.7,
     flex: 1,
-    outlineStyle: 'none',
-    color: 'white',
+    outlineStyle: "none",
+    color: "white",
   },
 
   Primary: {
-    color: '#B0AEAE',
+    color: "#B0AEAE",
     fontWeight: 500,
     fontSize: 10,
-    fontFamily: 'sans-serif',
+    fontFamily: "sans-serif",
   },
 
   Primary2: {
-    color: '#B0AEAE',
+    color: "#B0AEAE",
     fontSize: 13,
-    fontFamily: 'sans-serif',
+    fontFamily: "sans-serif",
   },
 
   header: {
@@ -257,21 +357,21 @@ const styles = StyleSheet.create({
   },
 
   searchBar: {
-    flexDirection: 'row',
-    alignItem: 'center',
-    justifyContent: 'center',
+    flexDirection: "row",
+    alignItem: "center",
+    justifyContent: "center",
   },
 
   headerBottom: {
     marginLeft: 10,
     marginRight: 10,
     marginTop: 15,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    flexDirection: "row",
+    justifyContent: "space-between",
   },
 
   hairLine: {
-    borderBottomColor: '#B0AEAE',
+    borderBottomColor: "#B0AEAE",
     borderBottomWidth: StyleSheet.hairlineWidth,
     opacity: 0.5,
   },
@@ -279,7 +379,7 @@ const styles = StyleSheet.create({
   profile: {
     height: 25,
     width: 25,
-    borderRadius: '50%',
+    borderRadius: "50%",
   },
 
   menu: {
@@ -288,30 +388,30 @@ const styles = StyleSheet.create({
   },
 
   profileContainer: {
-    backgroundColor: '#3C3E3F',
+    backgroundColor: "#3C3E3F",
     height: 40,
     width: 40,
-    alignItem: 'center',
-    justifyContent: 'center',
+    alignItem: "center",
+    justifyContent: "center",
     opacity: 0.7,
-    borderTopRightRadius: '50%',
-    borderBottomRightRadius: '50%',
+    borderTopRightRadius: "50%",
+    borderBottomRightRadius: "50%",
   },
 
   menuContainer: {
-    backgroundColor: '#3C3E3F',
+    backgroundColor: "#3C3E3F",
     height: 40,
     width: 40,
-    alignItem: 'center',
-    justifyContent: 'center',
+    alignItem: "center",
+    justifyContent: "center",
     opacity: 0.7,
     //borderTopLeftRadius: '50%',
-   // borderBottomLeftRadius: '50%',
+    // borderBottomLeftRadius: '50%',
     paddingLeft: 15,
   },
 
   mail: {
-    flexDirection: 'row',
+    flexDirection: "row",
     marginBottom: 20,
   },
 
@@ -320,29 +420,29 @@ const styles = StyleSheet.create({
     marginLeft: 20,
   },
   mailAuthor: {
-    color: '#B0AEAE',
+    color: "#B0AEAE",
     fontWeight: 600,
     fontSize: 17,
-    fontFamily: 'sans-serif',
+    fontFamily: "sans-serif",
   },
   mailHead: {
-    color: '#B0AEAE',
+    color: "#B0AEAE",
     fontWeight: 500,
     fontSize: 14,
-    fontFamily: 'sans-serif',
+    fontFamily: "sans-serif",
   },
   mailText: {
-    color: '#B0AEAE',
+    color: "#B0AEAE",
     fontWeight: 300,
     fontSize: 12,
-    fontFamily: 'sans-serif',
+    fontFamily: "sans-serif",
   },
   dateTime: {
-    justifyContent: 'space-between',
-    alignItems: 'flex-end',
+    justifyContent: "space-between",
+    alignItems: "flex-end",
   },
   mailDate: {
-    color: '#B0AEAE',
+    color: "#B0AEAE",
     fontWeight: 500,
   },
 
@@ -354,15 +454,15 @@ const styles = StyleSheet.create({
   mailImage: {
     height: 50,
     width: 50,
-    justifyContent: 'center',
+    justifyContent: "center",
   },
 
   footer: {
-    backgroundColor: '#3C3E3F',
+    backgroundColor: "#3C3E3F",
     height: 45,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
     opacity: 0.7,
   },
 
@@ -382,7 +482,7 @@ const styles = StyleSheet.create({
   },
 
   messageBox: {
-    backgroundColor: '#0369A6',
+    backgroundColor: "#0369A6",
     borderRadius: 20,
   },
 });
