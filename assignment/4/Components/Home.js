@@ -22,7 +22,7 @@ export default function HomeScreen({ navigation }) {
       content:
         'Internshala Hi Mahima,Here are some....',
       date: '18 Jun',
-      star: require('../str.png'),
+      star: require('../star.png'),
     },
 
     {
@@ -32,7 +32,7 @@ export default function HomeScreen({ navigation }) {
       subject: 'Your Google Account was recovered su...',
       content: 'Account recovered successfully 12345....',
       date: '17 Jun',
-      star: require('../str.png'),
+      star: require('../star.png'),
     },
 
     {
@@ -43,7 +43,7 @@ export default function HomeScreen({ navigation }) {
       content:
         'New Launches Are Waiting For You... ',
       date: '16 Jun',
-      star: require('../str.png'),
+      star: require('../star.png'),
     },
 
     {
@@ -54,7 +54,7 @@ export default function HomeScreen({ navigation }) {
       content:
         'Microsoft account Verify your email ad...',
       date: '15 Jun',
-      star: require('../str.png'),
+      star: require('../star.png'),
     },
 
     {
@@ -64,7 +64,7 @@ export default function HomeScreen({ navigation }) {
       subject: 'A first-party GitHub OAuth application has ...',
       content: 'Hey Mahimatestgithub!A first-party GitHub OAuth application...',
       date: '10 Jun',
-      star: require('../str.png'),
+      star: require('../star.png'),
     },
 
     {
@@ -74,7 +74,7 @@ export default function HomeScreen({ navigation }) {
       subject: 'Secure your tech future: with up to 100% scholarship...',
       content: 'Dear Mahima, Register for the grand summer scholarship...',
       date: '8 Jun',
-      star: require('../str.png'),
+      star: require('../star.png'),
     },
 
     {
@@ -85,7 +85,7 @@ export default function HomeScreen({ navigation }) {
       content:
         'Skills never discriminate neither does love...',
       date: '8 Jun',
-      star: require('../str.png'),
+      star: require('../star.png'),
     },
 
     {
@@ -95,7 +95,7 @@ export default function HomeScreen({ navigation }) {
       subject: 'Mahima,you will be surprised to hear about...',
       content: 'Dear Karan Kr,	 Recently your AdobeID password has changed.',
       date: '7 Jun',
-      star: require('../str.png'),
+      star: require('../star.png'),
     },
 
     {
@@ -106,7 +106,7 @@ export default function HomeScreen({ navigation }) {
       content:
         'Focus on the cloud skills and services that are most relevant to you across 30+ AWS solutions',
       date: '7 Jun',
-      star: require('../str.png'),
+      star: require('../star.png'),
     },
 
     {
@@ -117,7 +117,7 @@ export default function HomeScreen({ navigation }) {
       content:
         'Thanks for choosing to learn with us...',
       date: '6 Jun',
-      star: require('../str.png'),
+      star: require('../star.png'),
     },
   ];
 
