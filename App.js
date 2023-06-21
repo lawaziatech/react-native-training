@@ -1,46 +1,32 @@
-import * as React from 'react';
-import { Text, View, StyleSheet,Image} from 'react-native';
-import Constants from 'expo-constants';
-import Mail from "./components/mail"
-import Footer from "./components/Footer"
-// You can import from local files
-
+import * as React from "react";
+import { Text, View, StyleSheet, Image } from "react-native";
+import MyBox from "./components/MyBox";
+import Container from "./components/Container";
 
 export default function App() {
-  return (
-    <View>
-      <View style={styles.container}>
-        <Image source={require("./assets/menu.png")}/>
-        <Text style={{flex:1,paddingLeft:10}}>Search in Emails</Text>
-        <Image source={require("./assets/profile.png")}/>
-      </View>
-
-      <Mail logo={"S"} name={"Superset"} heading={"Avoid these resume mistakes and La..."} msg={"Hey there, 75% of resumes never get re..."}  time={"7.31 PM"}/>
-
-      <Mail logo={"I"} name={"Internshala"} heading={"New Interships for you.."} msg={"hello, Kaushal here is the list of internships.."}  time={"7.05 PM"}/>
-
-      <Mail logo={"I"} name={"Internshala"} heading={"New Interships for you.."} msg={"hello, Kaushal 5 new internships of you.."}  time={"6:32 PM"}/>
-
-      <Mail logo={"L"} name={"Linkedin"} heading={"New message in Inbox"} msg={"hello, Kaushal someone messaged you.."}  time={"6:08 PM"}/>
-      <Mail logo={"L"} name={"Linkedin"} heading={"New connection request"} msg={"hello, Kaushal new connection request for you.."}  time={"5:56 PM"}/>
-
-      <Mail logo={"I"} name={"Internshala"} heading={"New Interships for you.."} msg={"hello, Kaushal 5 new internships of you.."}  time={"5:23 PM"}/>
-      
-      <Footer/>
-
-
-    </View>
-  );
+	return (
+		<View style={{ paddingTop: 60 }}>
+			<MyBox text="Ashish Burnwal" />
+			<MyBox text="Kaushal Kumar" />
+			<MyBox text="Priya Kumari" />
+			<MyBox text="Nikita Kumari" />
+			<MyBox text="Ajit Kumar" />
+			<Container bgColor="#fab1a0" />
+			<Container bgColor="#81ecec" />
+			<Container bgColor="#b2bec3" />
+			<Container bgColor="#00cec9" />
+			<Container bgColor="#6c5ce7" />
+		</View>
+	);
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flexDirection:"row",
-    justifyContent:"space-around",
-    padding:5,
-    borderRadius:10,
-    margin:3,
-    backgroundColor:"#E3F4F4"
-  },
+	container: {
+		flexDirection: "row",
+		justifyContent: "space-around",
+		padding: 5,
+		borderRadius: 10,
+		margin: 3,
+		backgroundColor: "#E3F4F4",
+	},
 });
-
