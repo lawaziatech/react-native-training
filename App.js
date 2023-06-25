@@ -1,21 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import Contact from './Assignment/1/Index';
-export default function App() {
+// In App.js in a new project
+
+import * as React from "react";
+import { View, Text } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import HomeScreen from "./components/Home";
+import ItemDetails from "./components/ItemDetails";
+import Setting from "./components/Settings";
+
+const Stack = createNativeStackNavigator();
+
+function Mail() {
   return (
-    <View style={styles.container}>
-      {/* <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" /> */}
-      <Contact/>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="MyMail" component={ItemDetails} />
+        <Stack.Screen name="Settings" component={Setting} />
+
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default Mail;
