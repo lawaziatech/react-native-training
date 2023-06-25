@@ -1,20 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View } from "react-native";
+// import ContactApp from './Assignment_1/App';
+// import GmailClone from './Assignment_2/App';
+// import CounterApp from './Assignment_3/App';
+import GmailApp from './Assignment_4/App';
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    // <ContactApp/>
+    // <GmailClone/>
+    // <CounterApp/>
+    <GmailApp/>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
