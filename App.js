@@ -1,26 +1,10 @@
-// In App.js in a new project
+import React from 'react';
+import Route from './assignment/4/navigation/Route';
 
-import * as React from "react";
-import { View, Text } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import HomeScreen from "./components/Home";
-import ItemDetails from "./components/ItemDetails";
-import Setting from "./components/Settings";
 
-const Stack = createNativeStackNavigator();
-
-function Mail() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="MyMail" component={ItemDetails} />
-        <Stack.Screen name="Settings" component={Setting} />
-
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
+const App = ()=>{
+  return <Route/>
 }
 
-export default Mail;
+
+export default App;
