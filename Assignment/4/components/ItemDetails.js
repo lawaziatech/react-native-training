@@ -11,9 +11,6 @@ const ItemDetails = (props) => {
   return (
     <View style={{ margin: 5, justifyContent: "space-between" }}>
       <View style={styles.topContainer}>
-        <Image source={require("../assets/dots.png")} style={styles.icon} />
-        <Image source={require("../assets/delete.png")} style={styles.icon} />
-        <Image source={require("../assets/archive.png")} style={styles.icon} />
         <TouchableOpacity
           onPress={() => {
             props.navigation.goBack();
@@ -21,6 +18,14 @@ const ItemDetails = (props) => {
         >
           <Image source={require("../assets/back.png")} style={styles.back} />
         </TouchableOpacity>
+        <View style={{ flexDirection: "row", justifyContent: "space-evenly" }}>
+          <Image
+            source={require("../assets/archive.png")}
+            style={styles.icon}
+          />
+          <Image source={require("../assets/delete.png")} style={styles.icon} />
+          <Image source={require("../assets/dots.png")} style={styles.icon} />
+        </View>
       </View>
       <View style={styles.headingDesign}>
         <Text style={styles.headingText}>{description1}</Text>
@@ -64,8 +69,20 @@ const ItemDetails = (props) => {
       </View>
 
       <View style={styles.footer}>
-        <Image source={require("../assets/reply.png")} style={styles.logo} />
-        <Image source={require("../assets/forward.png")} style={styles.logo} />
+        <View style={[styles.logo]}>
+          <Image
+            source={require("../assets/reply.png")}
+            style={{ width: 30, height: 24 }}
+          />
+          <Text style={{fontFamily:'comic sans ms'}}>Reply</Text>
+        </View>
+        <View style={[styles.logo]}>
+          <Image
+            source={require("../assets/forward.png")}
+            style={{ width: 30, height: 24 }}
+          />
+          <Text style={{fontFamily:'comic sans ms'}}>Forward</Text>
+        </View>
       </View>
     </View>
   );
@@ -90,8 +107,9 @@ const styles = StyleSheet.create({
     marginLeft: 15,
   },
   topContainer: {
-    flexDirection: "row-reverse",
+    flexDirection: "row",
     margin: 30,
+    justifyContent: "space-between",
   },
   author: {
     flexDirection: "row",
@@ -136,16 +154,14 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   logo: {
-    width: 30,
-    height: 24,
-    margin: 10,
-    marginLeft: 60,
-    marginRight: 50,
+    width: 60,
+    height: 25,
+    margin: 12,
+    marginHorizontal: 50,
   },
   back: {
     width: 30,
     height: 25,
-    paddingVertical:15,
-    marginEnd:100,
+    paddingVertical: 15,
   },
 });

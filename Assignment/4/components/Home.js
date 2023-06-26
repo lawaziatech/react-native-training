@@ -10,7 +10,6 @@ import {
   SafeAreaView,
 } from "react-native";
 import Constants from "expo-constants";
-// import {  } from "react-native-web";
 
 export default function HomeScreen({ navigation }) {
   const Mail = [
@@ -178,9 +177,9 @@ export default function HomeScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.headingDesign}>
-        <Image source={require("../assets/menu.png")} style={styles.icon1} />
+        <Image source={require("../assets/menu.png")} style={[styles.icon1]} />
         <TextInput style={styles.headingText} placeholder="Search in emails" />
-        <Image source={require("../assets/profile.png")} style={styles.icon1} />
+        <Image source={require("../assets/profile.png")} style={[styles.icon1, {right:10}]} />
       </View>
       <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
         <Text style={styles.text4}>Primary</Text>
@@ -226,6 +225,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#EFF4FA",
     borderRadius: 300,
     flexDirection: "row",
+    justifyContent:'space-between'
   },
   headingText: {
     margin: 8,
@@ -265,13 +265,13 @@ const styles = StyleSheet.create({
     backgroundColor: "#EFF4FA",
     borderRadius: 30,
     flexDirection: "row",
+    justifyContent:'space-between',
   },
   logo: {
     width: 30,
     height: 24,
     margin: 10,
-    marginLeft: 60,
-    marginRight: 50,
+    marginHorizontal:50
   },
   icon1: {
     margin: 5,
