@@ -144,35 +144,58 @@ export default function HomeScreen({ navigation }) {
       time: "8:13 PM",
     },
   ];
+  const [starredEmails, setStarredEmails] = useState([]);
 
-  const Item = ({ item }) => (
-    <View style={styles.item}>
-      <Image source={item.image} style={styles.icon} />
+  const toggleStar = (id) => {
+    if (starredEmails.includes(id)) {
+      setStarredEmails(starredEmails.filter((emailId) => emailId !== id));
+    } else {
+      setStarredEmails([...starredEmails, id]);
+    }
+  };
 
-      <TouchableOpacity
-        onPress={() => {
-          navigation.navigate("MyMail", { item });
-        }}
-      >
-        <View style={{ flexDirection: "column" }}>
-          <Text style={styles.title}>{item.title}</Text>
-          <Text style={styles.text2}>
-            {item.description1.length > 30
-              ? item.description1.substring(0, 30) + "..."
-              : item.description1}
-          </Text>
-          <Text style={styles.text3}>
-            {item.description2.length > 30
-              ? item.description2.substring(0, 30) + "..."
-              : item.description2}
-          </Text>
-        </View>
-      </TouchableOpacity>
+   const Item = ({ item }) => {
+    const isStarred = starredEmails.includes(item.id);
 
-      <Text style={styles.time}>{item.time}</Text>
-      <Image source={require("../assets/star.png")} style={styles.star} />
-    </View>
-  );
+    return (
+      <View style={styles.item}>
+        <Image source={item.image} style={styles.icon} />
+
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate("MyMail", { item });
+          }}
+        >
+          <View style={{ flexDirection: "column" }}>
+            <Text style={styles.title}>{item.title}</Text>
+            <Text style={styles.text2}>
+              {item.description1.length > 30
+                ? item.description1.substring(0, 30) + "..."
+                : item.description1}
+            </Text>
+            <Text style={styles.text3}>
+              {item.description2.length > 30
+                ? item.description2.substring(0, 30) + "..."
+                : item.description2}
+            </Text>
+          </View>
+        </TouchableOpacity>
+
+        <Text style={styles.time}>{item.time}</Text>
+
+        <TouchableOpacity onPress={() => toggleStar(item.id)} style={styles.StarView}>
+          <Image
+            source={
+              isStarred
+                ? require("../assets/star-filled.png")
+                : require("../assets/star.png")
+            }
+            style={styles.star}
+          />
+        </TouchableOpacity>
+      </View>
+    );
+  };
 
   return (
     <View style={styles.container}>
@@ -289,9 +312,6 @@ const styles = StyleSheet.create({
   star: {
     width: 18,
     height: 18,
-    position: "absolute",
-    bottom: 1,
-    right: 0,
   },
   setting: {
     width: 25,
@@ -300,4 +320,9 @@ const styles = StyleSheet.create({
     bottom: 1,
     right: 0,
   },
+  StarView:{
+    position: "absolute",
+    bottom: 1,
+    right: 0,
+  }
 });
