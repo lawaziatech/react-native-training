@@ -28,7 +28,7 @@ export default function HomeScreen({ navigation }) {
             <TouchableOpacity
               style={styles.menuContainer}
               onPress={() => navigation.navigate("Settings")}>
-              <Image style={styles.menu} source={require('../../../../assets/menu.png')} />
+              <Image style={styles.menu} source={require('../../../../assets/menu1.png')} />
             </TouchableOpacity>
             <TextInput style={styles.input} placeholder="Search in emails" />
             <View style={styles.profileContainer}>
@@ -99,13 +99,15 @@ const styles = StyleSheet.create({
 
   input: {
     textAlign: 'center',
+    
     height: 40,
-    backgroundColor: '#3C3E3F',
+    backgroundColor: '#9ea2a3',
     // placeholderTextColor: 'white',
-    opacity: 0.7,
+    opacity: 0.5,
     flex: 1,
     // outlineStyle: 'none',
     color: 'white',
+    fontWeight:'bold'
   },
 
   Primary: {
@@ -155,6 +157,7 @@ const styles = StyleSheet.create({
     height: 25,
     width: 25,
     borderRadius: 25,
+    
   },
 
   menu: {

@@ -95,10 +95,10 @@ const Settings = (props) => {
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: 50,
+    paddingTop: 30,
     paddingHorizontal: 20,
     backgroundColor: '#181818',
-    height: 680,
+    height: 757,
   },
   leftElement: {
     flexDirection: 'row',
@@ -109,7 +109,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: 25,
+    marginBottom: 20,
+    
   },
   settingContainer: {
     flexDirection: 'row',
@@ -133,40 +134,49 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     fontSize: 15,
     fontFamily: 'sans-serif',
+    padding:30
   },
   headImage: {
     height: 25,
-    width: 25,
+    paddingTop:40,
+    width: 40,
   },
   settingIcon: {
     height: 20,
+    paddingTop:40,
     width: 20,
     marginRight: 10,
   },
   dotMenu: {
     flexDirection: 'column',
     marginBottom: 10,
+    paddingTop:40,
   },
   dot: {
-    lineHeight: 7,
-    fontSize: 25,
+    lineHeight: 20,
+    fontSize: 30,
     fontWeight: '600',
     color: '#B0AEAE',
     marginLeft: 20,
+    //paddingTop:40,
   },
   settingIcon: {
     marginRight: 10,
     width: 20,
     height: 20,
+    
   },
   settingText: {
     color: '#B0AEAE',
     fontWeight: '600',
     fontSize: 18,
     fontFamily: 'sans-serif',
+    
   },
   gmailText: {
     color: 'red',
+    paddingTop:60,
+
   },
 });
 
