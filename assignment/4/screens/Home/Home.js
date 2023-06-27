@@ -99,7 +99,6 @@ const styles = StyleSheet.create({
 
   input: {
     textAlign: 'center',
-    
     height: 40,
     backgroundColor: '#9ea2a3',
     // placeholderTextColor: 'white',
@@ -157,7 +156,7 @@ const styles = StyleSheet.create({
     height: 25,
     width: 25,
     borderRadius: 25,
-    
+    backgroundColor:'#9ea2a3'
   },
 
   menu: {
