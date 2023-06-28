@@ -20,7 +20,7 @@ const Mail= (props) => {
             <View style={{flexDirection:"column",alignItems: "center"}}>
                 <Text style={{marginRight: 5}}>{props.time}</Text>
 <Image
-source={require("./assets/star (1).png")}
+source={require("../assets/star (1).png")}
 style={{marginTop:6}}
 />
             </View>
