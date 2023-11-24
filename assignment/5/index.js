@@ -54,6 +54,7 @@ const Login = () => {
               placeholder='Email'
               value={email}
               onChangeText={(data)=> setEmail(data)}
+              keyboardType='email address'
               />
               <Text style= {styles.text}>Enter your password</Text>
             <TextInput style = {styles.inputStyle}
@@ -65,13 +66,14 @@ const Login = () => {
               onChangeText={(data)=> setPassword(data)}
               />
               </View>
-            <View>
+            <View style={styles.checkbox}>
                 <CheckBox
                 value={agree}
                 onValueChange={()=> 
                     setAgree(!agree)}
                     color={agree? "#164863": undefined}
                     />
+                    <Text>I have fill the above details</Text>
             </View>
            <TouchableOpacity style={[styles.buttonstyle,{backgroundColor:agree?"#164863":"grey",},
         ]}
@@ -87,10 +89,10 @@ export default Login;
 const styles = StyleSheet.create({
 
     container:{
-        height: "100%",
         paddingHorizontal:50,
         paddingTop:50,
         backgroundColor:"#C2DEDC",
+        flex:1,
     },
     heading:{
         fontSize:35,
@@ -105,7 +107,6 @@ const styles = StyleSheet.create({
         fontSize:18,
         color:"black",
         fontFamily:"serif",
-        marginLeft:0,
         marginRight:70,
     
     },
@@ -118,6 +119,7 @@ const styles = StyleSheet.create({
         fontFamily:"regular",
         fontSize:18,
         backgroundColor:"#EBE3D5",
+        marginTop:5,
     },
     buttonstyle: {
         paddingTop:30,
@@ -126,13 +128,16 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         alignItems: 'center',
         justifyContent:"center",
-        marginTop:10,
-        display:'flex',
+        marginTop:20,
       },
     buttonText: {
         color: '#fff',
         fontWeight: 'bold',
         fontSize: 16,
       },
+      checkbox:{
+        marginTop:6,
+        flexDirection:'row',
+      }
     
 })
